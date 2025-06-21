@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="root">
+    <div class="container">
+      {% if messages %}
+        {% for i in messages %}
+          <div id="form_message" class="message">{{ i }}</div>
+        {% endfor %}
+      {% endif %}
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputusername1" class="form-label">username</label>
+          <input required name="username" type="username" class="form-control" id="exampleInputusername1" aria-describedby="usernameHelp" />
+          <div id="usernameHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input required type="password" name="password" class="form-control" id="exampleInputPassword1" />
+        </div>
+
+        <div class="mb-3" id="mb">
+          <h3>Dnt have Account<a href="{% url 'create_user' %}">Click Here</a></h3>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}
