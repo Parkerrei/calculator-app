@@ -9,6 +9,8 @@ powered by the **Shunting Yard Algorithm** for accurate expression evaluation.
 - Handles decimals with precision using `parseFloat()`
 - Expression parsing with regular expressions and postfix evaluation
 - Modular design and intuitive UI
+- changes made to the calculator app for responsiveness across devices
+- made backend level email authentication for full authentication of emails formats
 
 📁 Project Structure
 calculator-app/ ├── index.html ├── style.css ├── script.js
